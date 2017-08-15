@@ -9,10 +9,6 @@ function G = configuration_goodness(rbm_w, visible_state, hidden_state)
     G = 0;
     
     for k = 1:m
-        for i = 1:number_visible
-            for j = 1:number_hidden
-                G = G + visible_state(i, k) .* rbm_w(j, i) .* hidden_state(j, k);
-            end
-        end
+        for i = 1:number_vi
     end
 end
